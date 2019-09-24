@@ -1,3 +1,4 @@
 # Don't track the CSE backup files
 *.c~
-*_soln.c
+# don't upload my solutions
+*_soln.*
