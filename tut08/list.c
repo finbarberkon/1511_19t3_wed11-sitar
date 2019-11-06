@@ -75,25 +75,6 @@ void insert_at_front(struct overall *l, int data) {
     l->start = new;
 }
 
-/* Create a node (using new_node function), and then insert that node at the 
-* end of the linked list */
-void insert_at_end(struct overall *l, int data) {
-    struct node *new = new_node(data);
-    
-    /* When dealing with linked lists, there are some cases where you can't rely
-     * on your general solution and have to write special cases.
-     * 
-     * Very often (including in the lab this week!) you will need to write a
-     * special case for when the list is empty, which I've done here */
-    if (l->end == NULL) {
-        l->start = new;
-        l->end = new;
-    } else {
-        l->end->next = new;
-        l->end = new;
-    }
-}
-
 /* Create a node (using new_node function), and then insert that node just
  * BEFORE the last element */
 void insert_before_end(struct overall *l, int data) {
