@@ -22,7 +22,6 @@ struct node {
 
 struct node *new_node(int data);
 void insert_at_front(struct overall *l, int data);
-void insert_at_end(struct overall *l, int data);
 void insert_before_end(struct overall *l, int data);
 
 int main(void) {
