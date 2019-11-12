@@ -1,6 +1,6 @@
 // Interface for a list Abstract Data Type (ADT)
-// Author: UNSW CSE
-// Date: July 2019
+// Author: UNSW CSE & Finbar Berkon
+// Date: November 2019
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,30 +16,30 @@ struct node {
 
 typedef struct node *Node;
 
-struct node *copy(struct node *head);
+Node copy(Node head);
 
-int identical(struct node *head1, struct node *head2);
+int identical(Node head1, Node head2);
 
-int ordered(struct node *head);
+int ordered(Node head);
 
 //============================================================================//
 //=========== Functions to allow us to interact with the list ADT ============//
 
 // creates a struct node with the given data value
 // returns a pointer to this node
-struct node *create_node(int dat);
+Node create_node(int dat);
 
 // given an array of integer values for data items
 // returns the head of a linked list with these values
 // in the order as they appear in the array
 // size gives the size of the array
-struct node *create_list(char **argv, int size);
+Node create_list(char **argv, int size);
 
 // prints out the list given the head of a list
-void print_list(struct node *head);
+void print_list(Node head);
 
 // frees all the elements in a linked list
-void free_list(struct node *head);
+void free_list(Node head);
 
 // return the number of items in the linked list
-int num_items(struct node *head);
+int num_items(Node head);

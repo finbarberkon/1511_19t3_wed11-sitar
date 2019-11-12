@@ -1,6 +1,6 @@
 // Using a list Abstract Data Type (ADT)
 // Author: Finbar Berkon
-// Date: August 2019
+// Date: November 2019
 
 #include "List.h"
 
