@@ -34,19 +34,24 @@ Node copy(Node head) {
         return NULL;
     }
     
-    Node new_head = malloc(sizeof(struct node));
-    new_head->data = head->data;
-
+    // Create a copy of the head node
+    Node new_head = create_node(head->data);
+    
+    // And keep track of the last new node we have created
     Node last_new_node = new_head;
+    
     Node curr = head->next;
-
     while (curr != NULL) {
-        last_new_node->next = malloc(sizeof(struct node));
+        // Make a copy of the current node
+        last_new_node->next = create_node(curr->data);
+        
+        // Iterate along on both lists
         last_new_node = last_new_node->next;
-        last_new_node->data = curr->data;
         curr = curr->next;
     }
-    last_new_node->next = NULL;
+    // If we did this without a new node function, we might need to set 
+    // last_new_node to NULL here, but because our create_node() function
+    // does this, we don't need to it again.
     
     return new_head;
 }
