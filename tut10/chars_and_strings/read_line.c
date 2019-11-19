@@ -1,4 +1,4 @@
-// Read a line of input.
+// Read a line of input when we ARE TOLD how long it might be
 
 #include <stdio.h>
 
@@ -6,7 +6,7 @@
 
 void read_line(char *buffer, int len);
 
-int main(int argc, char *argv[]) {
+int main(void) {
     // Declare a character array to hold our string. Set it initially to be
     // all '\0' - this ensures the string is valid by default
     char string[MAX_STR_LEN] = {'\0'};
