@@ -24,6 +24,7 @@ int main(void) {
 // then ensures that `string` is a null-terminated string.
 void read_line(char *string, int len) {
     fgets(string, len, stdin);
+    
     int i = 0;
     while (i < len) {
         if (string[i] == '\n') {
