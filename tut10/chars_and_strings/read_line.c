@@ -20,8 +20,15 @@ int main(void) {
     return 0;
 }
 
-// Reads a line of input into `buffer`, excluding the newline;
-// then ensures that `buffer` is a null-terminated string.
+// Reads a line of input into `string`, excluding the newline;
+// then ensures that `string` is a null-terminated string.
 void read_line(char *string, int len) {
-    // PUT YOUR CODE HERE
+    fgets(string, len, stdin);
+    int i = 0;
+    while (i < len) {
+        if (string[i] == '\n') {
+            string[i] = '\0';
+        }
+        i++;
+    }
 }
